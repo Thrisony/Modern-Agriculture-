@@ -1,4 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modern Agriculture</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
 <body>
+  <body class="home-page"></body>
 
 <header>
   <h1>🌱 Modern Agriculture</h1>
@@ -9,118 +22,105 @@
     <a href="aquaponics.html">Aquaponics</a>
     <a href="precision.html">Precision Farming</a>
   </nav>
-  <link rel="stylesheet" href="Style.css">
 </header>
 
-
-<section class="hero">
+<!-- HERO -->
+<section class="hero fade">
   <h2>Smart Farming for the Future</h2>
   <p>Discover innovative techniques transforming agriculture.</p>
 </section>
-<!-- AGRICULTURE EVOLUTION -->
-<section class="evolution">
+
+<!-- EVOLUTION -->
+<section class="evolution fade">
   <h2>Evolution of Agriculture</h2>
 
   <p>
-    Agriculture has evolved significantly over time, transforming from simple traditional practices
-    to advanced technology-driven systems. This evolution has improved productivity, efficiency,
-    and sustainability in food production.
+    Agriculture has evolved from traditional farming methods to advanced
+    technology-driven systems, improving productivity and sustainability.
   </p>
 
   <div class="timeline">
 
     <div class="stage">
       <h3>Traditional Farming</h3>
-      <p>
-        Early agriculture relied on manual labor, natural rainfall, and basic tools.
-        Farmers depended heavily on seasons and soil fertility.
-      </p>
+      <p>Manual labor, natural rainfall, and basic tools.</p>
     </div>
 
     <div class="stage">
       <h3>Green Revolution</h3>
-      <p>
-        Introduction of high-yield seeds, fertilizers, and irrigation systems increased
-        crop production and reduced food shortages.
-      </p>
+      <p>High-yield seeds, fertilizers, and irrigation improved production.</p>
     </div>
 
     <div class="stage">
       <h3>Modern Agriculture</h3>
-      <p>
-        Use of machinery, chemical fertilizers, and pesticides improved efficiency
-        but raised environmental concerns.
-      </p>
+      <p>Machinery and chemicals increased efficiency.</p>
     </div>
 
     <div class="stage">
       <h3>Smart Farming</h3>
-      <p>
-        Integration of technology such as sensors, IoT, AI, and data analytics
-        enables precision farming and better decision-making.
-      </p>
+      <p>AI, IoT, and sensors enable precision agriculture.</p>
     </div>
 
     <div class="stage">
       <h3>Future Farming</h3>
-      <p>
-        Advanced methods like hydroponics, vertical farming, and aquaponics
-        focus on sustainability, resource efficiency, and urban agriculture.
-      </p>
+      <p>Hydroponics, vertical farming, and aquaponics.</p>
     </div>
 
   </div>
-
-
 </section>
-<!-- INTRODUCTION TO MODERN TECHNIQUES -->
-<section class="intro-tech">
+
+<!-- INTRO -->
+<section class="intro-tech fade">
   <h2>Modern Agricultural Techniques</h2>
 
-  <p>
-    With the advancement of technology, agriculture has moved beyond traditional farming methods.
-    Modern techniques focus on increasing productivity, conserving resources, and ensuring sustainable food production.
-  </p>
-
-  <p>
-    The following innovative farming methods represent the future of agriculture, combining science,
-    technology, and environmental awareness to meet the growing food demands of the world.
-  </p>
-
- 
+  <p> With the advancement of technology, agriculture has moved beyond traditional farming methods. Modern techniques focus on increasing productivity, conserving resources, and ensuring sustainable food production. </p> <p> The following innovative farming methods represent the future of agriculture, combining science, technology, and environmental awareness to meet the growing food demands of the world. </p>
 </section>
-<section class="cards">
-   
 
+<!-- CARDS -->
+<section class="cards fade">
 
   <a href="hydroponics.html" class="card">
-  <img src="https://tse1.mm.bing.net/th/id/OIP.Eqp-ziQpJDzDmJSdWnaw1gHaHa?pid=Api&P=0&h=180" alt="Hydroponics">
-  <h3>Hydroponics</h3>
-  <p>Grow plants without soil using nutrient-rich water.</p>
-</a>
-<link rel="stylesheet" href="Style.css">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.Eqp-ziQpJDzDmJSdWnaw1gHaHa?pid=Api&P=0&h=180">
+    <h3>Hydroponics</h3>
+    <p>Grow plants without soil using nutrient-rich water.</p>
+  </a>
 
   <a href="vertical.html" class="card">
-    <img src="https://tse4.mm.bing.net/th/id/OIP.k8tNzjdZTMqH8yGFtmccYAHaFj?pid=Api&P=0&h=180" alt="vertical-farming">
-
+    <img src="https://tse4.mm.bing.net/th/id/OIP.k8tNzjdZTMqH8yGFtmccYAHaFj?pid=Api&P=0&h=180">
     <h3>Vertical Farming</h3>
     <p>Grow crops in stacked layers to save space.</p>
   </a>
 
   <a href="aquaponics.html" class="card">
-    <img src="https://i.ytimg.com/vi/8wsAiRNAqSc/maxresdefault.jpg" alt="Aquaponics">
-
+    <img src="https://i.ytimg.com/vi/8wsAiRNAqSc/maxresdefault.jpg">
     <h3>Aquaponics</h3>
     <p>Combine fish farming with plant cultivation.</p>
   </a>
 
   <a href="precision.html" class="card">
-    <img src="https://tse3.mm.bing.net/th/id/OIP.8q_UyZCXaomQTbgJEzfBzAHaE8?pid=Api&P=0&h=180" alt="Produces">
-  
+    <img src="https://tse3.mm.bing.net/th/id/OIP.8q_UyZCXaomQTbgJEzfBzAHaE8?pid=Api&P=0&h=180">
     <h3>Precision Farming</h3>
     <p>Use technology to improve crop yield efficiently.</p>
   </a>
 
 </section>
 
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+  const elements = document.querySelectorAll('.fade, .stage');
+
+  window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+
+      if (top < trigger) {
+        el.classList.add('show');
+      }
+    });
+  });
+</script>
+
 </body>
+</html>
